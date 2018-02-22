@@ -13,17 +13,17 @@ import java.util.List;
  */
 public class Person {
     
-    private boolean won;
+    private boolean winner;
     private int totalValue1;
     private int totalValue2;
     private List<Card> playerHand;
 
-    public boolean isWon() {
-        return won;
+    public boolean isWinner() {
+        return winner;
     }
 
-    public void setWon(boolean won) {
-        this.won = won;
+    public void setWinner(boolean won) {
+        this.winner = won;
     }
 
     public int getTotalValue1() {

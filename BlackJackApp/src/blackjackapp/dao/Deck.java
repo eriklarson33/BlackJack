@@ -8,6 +8,7 @@ package blackjackapp.dao;
 import blackjackapp.model.Card;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -23,9 +24,7 @@ public class Deck {
     private static final int[] values = {1,2,3,4,5,6,7,8,9,10,11};
     
     
-    private void createDeck() {
-        
-        
+    public void createDeck() {
         
         for (int i = 0; i<=suits.length; i++) {
             
@@ -83,25 +82,16 @@ public class Deck {
             }
         }
         
-//        for (int i = 0; i <= 52; i++) {
-//            Card currentCard = new Card();
-//            currentCard.setCardId(i);
-//            for(int j= 0; j<suits.length; j++) {
-//                
-//            }
-//            
-//            
-//        }
-        
-        for (int cardValue : values) {
-            System.out.println("hi.");
-        }
-        
     }
     
     // Method to pull a card from the deck RANDOMLY
     public Card pullCard() {
-        Card cardPicked = new Card();
+        
+        
+        Random cardPicker = new Random();
+        int ranIndex = cardPicker.nextInt(gameDeck.size());
+        Card cardPicked = gameDeck.remove(ranIndex);
+        
         return cardPicked;
     }
     

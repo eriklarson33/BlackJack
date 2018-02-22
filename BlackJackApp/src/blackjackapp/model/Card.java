@@ -13,7 +13,8 @@ public class Card {
     
     private String suit;
     private String rank;
-    private int cardValue;
+    private int cardValue1;
+    private int cardValue2;
     private int cardId;
 
     public String getSuit() {
@@ -32,12 +33,20 @@ public class Card {
         this.rank = rank;
     }
 
-    public int getCardValue() {
-        return cardValue;
+    public int getCardValue1() {
+        return cardValue1;
     }
 
-    public void setCardValue(int cardValue) {
-        this.cardValue = cardValue;
+    public void setCardValue1(int cardValue) {
+        this.cardValue1 = cardValue;
+    }
+    
+    public int getCardValue2() {
+        return cardValue1;
+    }
+
+    public void setCardValue2(int cardValue) {
+        this.cardValue2 = cardValue;
     }
 
     public int getCardId() {
